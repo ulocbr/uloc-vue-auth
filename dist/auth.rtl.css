@@ -1,0 +1,1080 @@
+/*
+ * Auth Plugin v0.0.1
+ * Uloc Framework
+ * (c) 2018-present Tiago Felipe
+ * Released under the MIT License.
+ */
+.app-auth-color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+[dir=ltr] .app-auth-color {
+  background: linear-gradient(to top right, rgba(255,82,99,0.9) 10%, rgba(255,115,129,0.9) 65%, rgba(252,189,1,0.9) 125%);
+}
+[dir=rtl] .app-auth-color {
+  background: linear-gradient(to top left, rgba(255,82,99,0.9) 10%, rgba(255,115,129,0.9) 65%, rgba(252,189,1,0.9) 125%);
+}
+.app-auth-color a.logo {
+  width: 120px;
+  height: 59px;
+  overflow: hidden;
+  text-indent: -5000px;
+  display: inline-block;
+}
+[dir] .app-auth-color a.logo {
+  background: url("./assets/logo.png") center no-repeat;
+  background-size: contain;
+}
+.app-auth-color .auth-header {
+  flex-shrink: 0;
+}
+[dir=ltr] .app-auth-color .auth-header {
+  margin: 0 0 30px -5px;
+}
+[dir=rtl] .app-auth-color .auth-header {
+  margin: 0 -5px 30px 0;
+}
+.app-auth-color .auth-container {
+  flex-shrink: 0;
+  width: 95%;
+}
+[dir] .app-auth-color .auth-container {
+  margin: 0 auto;
+}
+.app-auth-color .auth-content {
+  line-height: 1.5;
+}
+[dir] .app-auth-color .auth-content {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+  text-align: center;
+}
+.app-auth-color .auth-content .title {
+  color: #151b26;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: none;
+}
+[dir] .app-auth-color .auth-content .title {
+  padding: 45px 30px 30px;
+}
+.app-auth-color .auth-content .btn-def {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+}
+[dir] .app-auth-color .auth-content .btn-def {
+  background-color: #14aaf5 !important;
+  border-radius: 4px;
+  padding: 0 15px;
+}
+.app-auth-color .auth-content .auth-separator {
+  color: #b7bfc6;
+  font-size: 24px;
+  position: relative;
+}
+[dir] .app-auth-color .auth-content .auth-separator {
+  margin-top: 35px;
+}
+.app-auth-color .auth-content .auth-separator:before,
+.app-auth-color .auth-content .auth-separator:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  z-index: 0;
+}
+[dir] .app-auth-color .auth-content .auth-separator:before, [dir] .app-auth-color .auth-content .auth-separator:after {
+  border-top: 1px solid #e0e6e8;
+}
+[dir=ltr] .app-auth-color .auth-content .auth-separator:before, [dir=ltr] .app-auth-color .auth-content .auth-separator:after {
+  left: 0;
+}
+[dir=rtl] .app-auth-color .auth-content .auth-separator:before, [dir=rtl] .app-auth-color .auth-content .auth-separator:after {
+  right: 0;
+}
+[dir=ltr] .app-auth-color .auth-content .auth-separator:before {
+  left: auto;
+  right: 0;
+}
+[dir=rtl] .app-auth-color .auth-content .auth-separator:before {
+  right: auto;
+  left: 0;
+}
+[dir] .app-auth-color .auth-content .form-input {
+  margin-top: 30px;
+}
+[dir=ltr] .app-auth-color .auth-content .form-input {
+  text-align: left;
+}
+[dir=rtl] .app-auth-color .auth-content .form-input {
+  text-align: right;
+}
+[dir=ltr] .app-auth-color .auth-content .form-input.text-right {
+  text-align: right;
+}
+[dir=rtl] .app-auth-color .auth-content .form-input.text-right {
+  text-align: left;
+}
+.app-auth-color .auth-content .form-input label {
+  color: #848f99;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+}
+[dir] .app-auth-color .auth-content .form-input label {
+  margin-bottom: 7px;
+}
+.app-auth-color .auth-content .form-input input,
+.app-auth-color .auth-content .form-input select,
+.app-auth-color .auth-content .form-input textarea {
+  color: #151b26;
+  height: 40px;
+  width: 100%;
+}
+[dir] .app-auth-color .auth-content .form-input input, [dir] .app-auth-color .auth-content .form-input select, [dir] .app-auth-color .auth-content .form-input textarea {
+  background-color: #fff;
+  border: 1px solid #d5dce0;
+  border-radius: 4px;
+  margin: 0;
+}
+[dir=ltr] .app-auth-color .auth-content .form-input input, [dir=ltr] .app-auth-color .auth-content .form-input select, [dir=ltr] .app-auth-color .auth-content .form-input textarea {
+  padding: 0 0 0 10px;
+}
+[dir=rtl] .app-auth-color .auth-content .form-input input, [dir=rtl] .app-auth-color .auth-content .form-input select, [dir=rtl] .app-auth-color .auth-content .form-input textarea {
+  padding: 0 10px 0 0;
+}
+.app-auth-color .auth-content .form-input input {
+  line-height: normal;
+}
+[dir] .app-auth-color .auth-content .auth-form {
+  padding: 0 30px;
+}
+[dir] .app-auth-color .auth-content form.auth-form {
+  padding-bottom: 45px;
+}
+@media (min-width: 48em) {
+  [dir] .app-auth-color .auth-content .auth-form {
+    padding: 0 90px;
+  }
+}
+.app-auth-color .auth-content .input--help {
+  display: block;
+}
+[dir] .app-auth-color .auth-content .input--help {
+  margin-top: 10px;
+}
+.app-auth-color .auth-content .input--help a {
+  color: #848f99;
+  font-size: 11px;
+}
+[dir] .app-auth-color .auth-content .input--help a {
+  border-bottom: 1px dotted #848f99;
+}
+[dir=ltr] .app-auth-color .auth-content .input--help a {
+  text-align: left;
+}
+[dir=rtl] .app-auth-color .auth-content .input--help a {
+  text-align: right;
+}
+.app-auth-color .auth-content .input--help a:hover {
+  text-decoration: none;
+}
+[dir] .app-auth-color .auth-content .input--help a:hover {
+  border-bottom: 1px solid #848f99;
+}
+.app-auth-color .auth-content .login-errors {
+  color: #900;
+}
+[dir] .app-auth-color .auth-content .login-errors {
+  padding: 10px;
+}
+@media (min-width: 48em) {
+  .app-auth-color .auth-container {
+    width: 585px;
+  }
+}
+.app-auth-color .auth-footer {
+  color: #fff;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+[dir] .app-auth-color .auth-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+.app-auth {
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+}
+[dir] .app-auth {
+  background-size: cover;
+  background-color: #0f0f0f;
+}
+[dir=ltr] .app-auth {
+  left: 0;
+  right: 0;
+}
+[dir=rtl] .app-auth {
+  right: 0;
+  left: 0;
+}
+.app-auth a,
+.app-auth button,
+.app-auth input {
+  outline: none !important;
+}
+.app-auth .clearfloat {
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+[dir] .app-auth .clearfloat {
+  clear: both;
+}
+.app-auth .oculto {
+  display: none;
+}
+.app-auth .img-block {
+  display: inline-block !important;
+}
+[dir] .app-auth .background {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-position: 50% 50% !important;
+}
+.app-auth .fullscreen,
+.app-auth .content-a {
+  width: 100%;
+  min-height: 100%;
+}
+.app-auth .not-fullscreen,
+.app-auth .not-fullscreen .content-a,
+.app-auth .fullscreen.not-overflow,
+.app-auth .fullscreen.not-overflow .content-a {
+  height: 100%;
+  overflow: hidden;
+}
+.app-auth .content-a {
+  display: table;
+}
+.app-auth .content-b {
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+}
+[dir] .app-auth .content-b {
+  text-align: center;
+}
+.app-auth .not-fullscreen {
+  height: 50%;
+}
+.app-auth html {
+  height: 100%;
+  font-weight: 300;
+}
+.app-auth body {
+  font-weight: 300;
+}
+[dir] .app-auth body {
+  background-color: #0f0f0f;
+}
+[dir] .app-auth ul, [dir] .app-auth li {
+  padding: 0;
+  margin: 0;
+}
+.app-auth h1,
+.app-auth h2,
+.app-auth h3,
+.app-auth h4 {
+  font-weight: 300;
+  color: #666;
+}
+[dir] .app-auth h1, [dir] .app-auth h2, [dir] .app-auth h3, [dir] .app-auth h4 {
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+.app-auth h1 {
+  font-size: 32px;
+}
+.app-auth h2 {
+  font-size: 28px;
+}
+.app-auth h3 {
+  font-size: 18px;
+}
+.app-auth h4 {
+  font-size: 16px;
+}
+.app-auth h1 strong,
+.app-auth h2 strong,
+.app-auth h3 strong,
+.app-auth h4 strong {
+  font-weight: 400;
+}
+[dir] .app-auth .center-full.cinza {
+  background-color: #f6f7f7;
+  padding: 50px 0;
+}
+[dir] .app-auth .center-full.azul {
+  background-color: #e4eef2;
+  padding: 50px 0;
+}
+[dir] .app-auth .bg-white {
+  background-color: #fff;
+}
+[dir] .app-auth .content {
+  clear: both;
+}
+[dir] .app-auth .clearboth {
+  clear: both;
+}
+.app-auth .bg-c {
+  position: relative;
+}
+.app-auth li img,
+.app-auth .bg,
+.app-auth .bg img {
+  transition: opacity 1.4s;
+}
+.app-auth .bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  opacity: 0.8;
+}
+[dir] .app-auth .bg {
+  background-size: cover;
+}
+[dir=ltr] .app-auth .bg {
+  right: 0;
+  left: 0;
+}
+[dir=rtl] .app-auth .bg {
+  left: 0;
+  right: 0;
+}
+.app-auth .bg img {
+  display: none;
+}
+.app-auth .bg.is-loading img,
+.app-auth .bg.is-loading {
+  opacity: 0;
+}
+.app-auth .container-login {
+  z-index: 2;
+}
+[dir] .app-auth .container-login {
+  padding: 25px 30px;
+}
+.app-auth .logo {
+  width: 177px;
+  height: 48px;
+  overflow: hidden;
+  text-indent: -5000px;
+  display: block;
+}
+[dir] .app-auth .logo {
+  background-repeat: no-repeat !important;
+  background: url("./assets/logo.png");
+  background-size: contain !important;
+}
+.app-auth .d-t {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+[dir=ltr] .app-auth .d-t {
+  left: 0;
+  right: 0;
+}
+[dir=rtl] .app-auth .d-t {
+  right: 0;
+  left: 0;
+}
+.app-auth .d-r {
+  display: table-row;
+  height: 100%;
+}
+.app-auth .d-c {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+[dir] .app-auth .d-c {
+  text-align: center;
+}
+.app-auth .d-c.r {
+  width: 1px;
+}
+[dir=ltr] .app-auth .d-c.r {
+  padding-right: 46px;
+  text-align: left;
+}
+[dir=rtl] .app-auth .d-c.r {
+  padding-left: 46px;
+  text-align: right;
+}
+.app-auth .timer {
+  display: inline-block;
+}
+.app-auth .timer h1 {
+  font-size: 150px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+}
+[dir] .app-auth .timer h1 {
+  margin: 0;
+}
+[dir=ltr] .app-auth .timer h1 {
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.1), 1px -1px 0 rgba(0,0,0,0.1), -1px 1px 0 rgba(0,0,0,0.1), 1px 1px 0 rgba(0,0,0,0.1);
+}
+[dir=rtl] .app-auth .timer h1 {
+  text-shadow: 1px -1px 0 rgba(0,0,0,0.1), -1px -1px 0 rgba(0,0,0,0.1), 1px 1px 0 rgba(0,0,0,0.1), -1px 1px 0 rgba(0,0,0,0.1);
+}
+.app-auth .timer h2 {
+  display: block;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+[dir] .app-auth .timer h2 {
+  text-align: center;
+}
+[dir=ltr] .app-auth .timer h2 {
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.1), 1px -1px 0 rgba(0,0,0,0.1), -1px 1px 0 rgba(0,0,0,0.1), 1px 1px 0 rgba(0,0,0,0.1);
+}
+[dir=rtl] .app-auth .timer h2 {
+  text-shadow: 1px -1px 0 rgba(0,0,0,0.1), -1px -1px 0 rgba(0,0,0,0.1), 1px 1px 0 rgba(0,0,0,0.1), -1px 1px 0 rgba(0,0,0,0.1);
+}
+.app-auth #login2 {
+  display: none;
+  min-height: 200px;
+}
+[dir] .app-auth #login2 {
+  background-color: #000;
+}
+.app-auth .login-tab {
+  width: 450px;
+  overflow: hidden;
+}
+[dir] .app-auth .login-tab {
+  background-color: #fff;
+  border-radius: 8px;
+}
+[dir=ltr] .app-auth .login-tab {
+  text-align: left !important;
+}
+[dir=rtl] .app-auth .login-tab {
+  text-align: right !important;
+}
+[dir] .app-auth .login-tab form {
+  margin: 0;
+  padding: 0 20px;
+}
+.app-auth .login-tab ul.options {
+  list-style: none;
+  list-style-type: none;
+}
+[dir] .app-auth .login-tab ul.options {
+  margin: 0;
+  padding: 0;
+}
+.app-auth .login-tab ul.options li a {
+  font-size: 20px;
+  width: 50%;
+  display: block;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none !important;
+}
+[dir] .app-auth .login-tab ul.options li a {
+  padding: 30px 20px 20px;
+  margin: 0;
+  background-color: #427fed;
+}
+[dir=ltr] .app-auth .login-tab ul.options li a {
+  float: left;
+}
+[dir=rtl] .app-auth .login-tab ul.options li a {
+  float: right;
+}
+.app-auth .login-tab ul.options li a:hover {
+  text-decoration: none;
+  -webkit-filter: brightness(1.1);
+  -moz-filter: brightness(1.1);
+  -ms-filter: brightness(1.1);
+  -o-filter: brightness(1.1);
+  filter: brightness(1.1);
+}
+.app-auth .login-tab ul.options li.selected a {
+  color: #333;
+}
+[dir] .app-auth .login-tab ul.options li.selected a {
+  background-color: transparent;
+}
+[dir] .app-auth .form-login {
+  clear: both;
+}
+.app-auth .form-login label {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.app-auth .input-login {
+  display: block;
+  width: 100%;
+  transition: all 150ms linear, border-color 0s;
+  font-size: 16px;
+}
+[dir] .app-auth .input-login {
+  background: none;
+  margin: 20px 0;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  border-bottom: #ccc 1px solid;
+  cursor: text;
+}
+[dir] .app-auth input:hover.input-login {
+  background-color: #f8f8f8;
+}
+.app-auth .s-i-l {
+  width: 100%;
+  display: block;
+}
+[dir] .app-auth .s-i-l {
+  margin: auto;
+}
+.app-auth label[for="remember_me"],
+.app-auth label[for="remember_me2"] {
+  display: block;
+  font-weight: normal;
+}
+[dir] .app-auth label[for="remember_me"], [dir] .app-auth label[for="remember_me2"] {
+  margin-bottom: 20px;
+}
+[dir=ltr] .app-auth label[for="remember_me"], [dir=ltr] .app-auth label[for="remember_me2"] {
+  float: left;
+}
+[dir=rtl] .app-auth label[for="remember_me"], [dir=rtl] .app-auth label[for="remember_me2"] {
+  float: right;
+}
+[dir] .app-auth input.lembrar {
+  margin-bottom: 20px;
+}
+[dir=ltr] .app-auth input.lembrar {
+  float: left;
+  margin-right: 6px;
+}
+[dir=rtl] .app-auth input.lembrar {
+  float: right;
+  margin-left: 6px;
+}
+[dir] .app-auth .hdiv {
+  margin-bottom: 40px;
+}
+.app-auth .btn-login {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+}
+[dir] .app-auth .btn-login {
+  border: none;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  text-align: center;
+  background-color: #427fed;
+  border-radius: 3px;
+}
+.app-auth .login-errors {
+  color: #900;
+}
+[dir] .app-auth .login-errors {
+  padding: 0 20px 0;
+}
+[dir] .app-auth .login-tab.dev {
+  background-color: #000;
+}
+.app-auth .login-tab.dev ul.options li.selected a {
+  color: #fff;
+}
+[dir] .app-auth .login-tab.dev ul.options li.selected a {
+  background-color: #000;
+}
+.app-auth .login-tab.dev .input-login {
+  display: inline-block;
+  width: 70%;
+  color: #fff;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+[dir] .app-auth .login-tab.dev .input-login {
+  background: none;
+  margin: 0;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0px;
+  padding: 5px;
+  border-bottom: none;
+  cursor: default;
+}
+[dir=ltr] .app-auth .login-tab.dev .input-login {
+  float: left;
+}
+[dir=rtl] .app-auth .login-tab.dev .input-login {
+  float: right;
+}
+[dir] .app-auth .login-tab.dev input:hover.input-login {
+  background-color: transparent;
+}
+.app-auth .login-tab.dev input.password {
+  display: none;
+}
+[dir] .app-auth .login-tab.dev input.password {
+  margin-bottom: 40px;
+}
+.app-auth .login-tab.dev .btn-login {
+  text-indent: -5000px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+[dir] .app-auth .login-tab.dev .btn-login {
+  background: none;
+  background-color: transparent;
+  border: none;
+}
+.app-auth .login-tab.dev label {
+  display: none;
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+}
+[dir] .app-auth .login-tab.dev label {
+  padding: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+[dir=ltr] .app-auth .login-tab.dev label {
+  float: left;
+  clear: left;
+  margin-left: 15px;
+}
+[dir=rtl] .app-auth .login-tab.dev label {
+  float: right;
+  clear: right;
+  margin-right: 15px;
+}
+.app-auth .login-tab.dev label[for="username2"] {
+  display: block;
+}
+[dir] .app-auth .login-tab.dev .username {
+  margin-top: 0;
+}
+.app-auth .text-bottom-left {
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  opacity: 0.8;
+  color: #fff;
+  font-weight: 400;
+}
+[dir=ltr] .app-auth .text-bottom-left {
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.1), 1px -1px 0 rgba(0,0,0,0.1), -1px 1px 0 rgba(0,0,0,0.1), 1px 1px 0 rgba(0,0,0,0.1);
+  left: 30px;
+}
+[dir=rtl] .app-auth .text-bottom-left {
+  text-shadow: 1px -1px 0 rgba(0,0,0,0.1), -1px -1px 0 rgba(0,0,0,0.1), 1px 1px 0 rgba(0,0,0,0.1), -1px 1px 0 rgba(0,0,0,0.1);
+  right: 30px;
+}
+.app-auth .text-bottom-left a {
+  color: #fff;
+}
+.app-auth .text-bottom-right {
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  opacity: 0.8;
+  color: #fff;
+  font-weight: 400;
+  font-size: 10px;
+  opacity: 0.4;
+}
+[dir=ltr] .app-auth .text-bottom-right {
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.1), 1px -1px 0 rgba(0,0,0,0.1), -1px 1px 0 rgba(0,0,0,0.1), 1px 1px 0 rgba(0,0,0,0.1);
+  right: 30px;
+}
+[dir=rtl] .app-auth .text-bottom-right {
+  text-shadow: 1px -1px 0 rgba(0,0,0,0.1), -1px -1px 0 rgba(0,0,0,0.1), 1px 1px 0 rgba(0,0,0,0.1), -1px 1px 0 rgba(0,0,0,0.1);
+  left: 30px;
+}
+.app-auth .text-bottom-right a {
+  color: #fff;
+}
+@media screen and (max-width: 840px) {
+  .app-auth .d-c.left {
+    display: none;
+  }
+  .app-auth .d-c.r {
+    width: 100%;
+  }
+  [dir=ltr] .app-auth .d-c.r {
+    padding-right: 0;
+  }
+  [dir=rtl] .app-auth .d-c.r {
+    padding-left: 0;
+  }
+  [dir] .app-auth .login-tab, [dir] .app-auth .logo {
+    margin: auto;
+  }
+  .app-auth .text-bottom-left,
+  .app-auth .text-bottom-right {
+    z-index: 2;
+    bottom: 20px;
+    position: relative;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+  }
+  [dir] .app-auth .text-bottom-left, [dir] .app-auth .text-bottom-right {
+    text-align: center;
+  }
+  [dir=ltr] .app-auth .text-bottom-left, [dir=ltr] .app-auth .text-bottom-right {
+    left: 0;
+    right: 0;
+  }
+  [dir=rtl] .app-auth .text-bottom-left, [dir=rtl] .app-auth .text-bottom-right {
+    right: 0;
+    left: 0;
+  }
+  [dir] .app-auth .text-bottom-right {
+    margin-top: 10px;
+  }
+  .app-auth .d-t {
+    bottom: 0;
+    position: relative;
+    top: 0;
+    display: table;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  [dir] .app-auth .d-t {
+    margin: 30px auto;
+  }
+  [dir=ltr] .app-auth .d-t {
+    left: 0;
+    right: 0;
+  }
+  [dir=rtl] .app-auth .d-t {
+    right: 0;
+    left: 0;
+  }
+}
+@media screen and (max-width: 470px) {
+  .app-auth .login-tab {
+    width: 100%;
+  }
+  [dir] .app-auth .login-tab {
+    border-radius: 0;
+  }
+  .app-auth .login-tab.dev {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  [dir] .app-auth .login-tab.dev {
+    border-radius: 0;
+  }
+  [dir=ltr] .app-auth .login-tab.dev {
+    left: 0;
+    right: 0;
+  }
+  [dir=rtl] .app-auth .login-tab.dev {
+    right: 0;
+    left: 0;
+  }
+  .app-auth .login-tab ul.options li a {
+    font-size: 13px !important;
+  }
+  [dir] .app-auth .login-tab ul.options li a {
+    padding: 10px;
+  }
+  .app-auth .login-tab.dev label {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .app-auth .login-tab.dev .input-login {
+    width: 50%;
+    font-size: 12px;
+  }
+  [dir=ltr] .app-auth .login-tab.dev label[for="password2"] {
+    clear: left;
+  }
+  [dir=rtl] .app-auth .login-tab.dev label[for="password2"] {
+    clear: right;
+  }
+  .app-auth .text-bottom-left {
+    display: none;
+  }
+}
+.app-auth-uloc {
+  z-index: 0;
+  min-height: 100vh;
+  height: 100%;
+}
+[dir] .app-auth-uloc {
+  background-color: rgba(102,153,255,0.15);
+}
+.app-auth-uloc .logo-image {
+  display: inline-block;
+}
+.app-auth-uloc .logo-image svg {
+  width: 177px;
+  height: 48px;
+}
+.app-auth-uloc .fundo {
+  min-height: 100vh;
+  z-index: 0;
+}
+[dir] .app-auth-uloc .fundo {
+  background-color: rgba(102,153,255,0.15);
+}
+.app-auth-uloc .novidades {
+  min-height: 100vh;
+  z-index: 0;
+}
+[dir] .app-auth-uloc .novidades {
+  background-size: 400% 400%;
+}
+[dir=ltr] .app-auth-uloc .novidades {
+  background-image: linear-gradient(44deg, #8cb638, #8cb638, #0e867d, #0e867d);
+  -webkit-animation:  Gradient-ltr 10s ease infinite;
+  animation:  Gradient-ltr 10s ease infinite;
+  padding-left: 95px;
+}
+[dir=rtl] .app-auth-uloc .novidades {
+  background-image: linear-gradient(-44deg, #8cb638, #8cb638, #0e867d, #0e867d);
+  -webkit-animation:  Gradient-rtl 10s ease infinite;
+  animation:  Gradient-rtl 10s ease infinite;
+  padding-right: 95px;
+}
+.app-auth-uloc .novidades .conteudo .contexto {
+  position: absolute;
+  top: 50%;
+}
+[dir] .app-auth-uloc .novidades .conteudo .contexto {
+  transform: translate(0, -50%);
+}
+.app-auth-uloc .novidades .conteudo .bem-vindo {
+  font-family: 'Open Sans';
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 1.33;
+  color: #fff;
+}
+[dir=ltr] .app-auth-uloc .novidades .conteudo .bem-vindo {
+  text-align: left;
+}
+[dir=rtl] .app-auth-uloc .novidades .conteudo .bem-vindo {
+  text-align: right;
+}
+.app-auth-uloc .novidades .conteudo .mensagem {
+  font-family: 'Open Sans';
+  font-size: 48px;
+  width: 380px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: #fff;
+}
+[dir=ltr] .app-auth-uloc .novidades .conteudo .mensagem {
+  text-align: left;
+}
+[dir=rtl] .app-auth-uloc .novidades .conteudo .mensagem {
+  text-align: right;
+}
+.app-auth-uloc .regiao-login {
+  position: absolute;
+  height: 486px;
+  z-index: 1;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+  letter-spacing: 0.7px;
+}
+[dir] .app-auth-uloc .regiao-login {
+  border-radius: 2px;
+  background-color: #fff;
+  padding-top: 40px;
+  text-align: center;
+}
+[dir=ltr] .app-auth-uloc .regiao-login {
+  box-shadow: 20px 20px 20px 0 rgba(0,0,0,0.25);
+}
+[dir=rtl] .app-auth-uloc .regiao-login {
+  box-shadow: -20px 20px 20px 0 rgba(0,0,0,0.25);
+}
+[dir=ltr] .app-auth-uloc .animated {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+[dir=rtl] .app-auth-uloc .animated {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+[dir] .app-auth-uloc .btn-login {
+  padding: 14px 0;
+}
+.app-auth-uloc .btn-login i {
+  position: absolute;
+}
+[dir=ltr] .app-auth-uloc .btn-login i {
+  right: 10px;
+}
+[dir=rtl] .app-auth-uloc .btn-login i {
+  left: 10px;
+}
+@media screen and (min-width: 992px) {
+  .app-auth-uloc .regiao-login {
+    width: 490px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .app-auth-uloc .regiao-login {
+    top: 50%;
+  }
+  [dir=ltr] .app-auth-uloc .regiao-login {
+    left: 50%;
+    transform: translate(-450px, -50%);
+  }
+  [dir=rtl] .app-auth-uloc .regiao-login {
+    right: 50%;
+    transform: translate(450px, -50%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .app-auth-uloc .regiao-login {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 490px;
+  }
+  [dir=ltr] .app-auth-uloc .regiao-login {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  [dir=rtl] .app-auth-uloc .regiao-login {
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+}
+@media screen and (max-width: 992px) and (min-height: 600px) {
+  [dir] .app-auth-uloc .regiao-login {
+    margin-top: 95px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .app-auth-uloc .regiao-login {
+    top: 0%;
+  }
+}
+@-webkit-keyframes Gradient-ltr {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-webkit-keyframes Gradient-rtl {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@media (max-height: 720px) {
+  .app-auth-uloc .auth-content .auth-separator,
+  .app-auth-uloc .auth-content .title {
+    display: none;
+  }
+  [dir] .app-auth-uloc .auth-content .auth-form {
+    padding-top: 30px !important;
+  }
+}
+@-webkit-keyframes Gradient-ltr {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-webkit-keyframes Gradient-rtl {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes Gradient-ltr {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes Gradient-rtl {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

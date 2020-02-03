@@ -29,7 +29,7 @@ Vue.use(Plugin, {
 })
 
 let provider = new JWTProvider({
-  urlApi: 'http://ws.rogeriomenezes.local:8000/api',
+  urlApi: 'https://api.rogeriomenezes.com.br/api',
   urlAuth: '/auth'
 })
 Plugin.Provider.defineProvider(provider)

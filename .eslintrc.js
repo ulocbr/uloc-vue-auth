@@ -53,6 +53,10 @@ module.exports = {
     'prefer-promise-reject-errors': 0,
 
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+
+    // Vue
+    'vue/html-self-closing': 'off',
+    'vue/singleline-html-element-content-newline': 'off'
   }
 }

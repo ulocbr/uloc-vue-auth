@@ -6,6 +6,7 @@ export default {
         password: ''
       },
       loginError: '',
+      rememberMe: true,
       isLoading: false
     }
   },

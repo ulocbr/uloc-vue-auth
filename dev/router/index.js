@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './routes'
-import {createLogin, createLogout, AuthThemeColor} from 'src'
+import {createLogin, createLogout, AuthThemeUloc} from 'src'
 
 routes.push(createLogin({
   loginUrl: '/login',
-  loginComponent: AuthThemeColor
+  loginComponent: AuthThemeUloc
 }))
 routes.push(createLogout())
 

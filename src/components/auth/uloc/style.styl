@@ -1,0 +1,163 @@
+/*	developed by tiagofelipe.com
+  v0.1 stylesheet
+*/
+.app-auth-uloc {
+  background-color: rgba(102, 153, 255, 0.15);
+  z-index: 0;
+  min-height: 100vh;
+  height 100%;
+
+  .logo-image {
+    svg {
+      width: 177px;
+      height: 48px;
+    }
+    display inline-block;
+  }
+
+  .fundo {
+    min-height: 100vh;
+    background-color: rgba(102, 153, 255, 0.15);
+    z-index: 0;
+  }
+
+  .novidades {
+    min-height: 100vh;
+    background-image: linear-gradient(44deg, #8CB638, #8CB638, #0E867D, #0E867D);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    padding-left: 95px;
+    z-index: 0;
+
+    .conteudo {
+      .contexto {
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        position: absolute;
+        top: 50%;
+      }
+
+      .bem-vindo {
+        font-family: 'Open Sans';
+        font-size: 36px;
+        font-weight: 100;
+        line-height: 1.33;
+        text-align: left;
+        color: #ffffff;
+      }
+
+      .mensagem {
+        font-family: 'Open Sans';
+        font-size: 48px;
+        width: 380px;
+        font-weight: bold;
+        line-height: 1.33;
+        text-align: left;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .regiao-login {
+    position: absolute;
+    height: 486px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out;
+    padding-top: 40px;
+    text-align: center;
+    letter-spacing: 0.7px;
+  }
+
+  .animated {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .btn-login {
+    padding 14px 0
+
+    i {
+      position absolute
+      right 10px
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .regiao-login {
+      width: 490px;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .regiao-login {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-450px, -50%);
+      transform: translate(-450px, -50%);
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .regiao-login {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      max-width: 490px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+  }
+  @media screen and (max-width: 992px) and (min-height: 600px) {
+    .regiao-login {
+      margin-top: 95px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .regiao-login {
+      top: 0%;
+    }
+  }
+
+
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+  @media (max-height: 720px) {
+    .auth-content {
+      .auth-separator, .title {
+        display none
+      }
+
+      .auth-form {
+        padding-top 30px !important
+      }
+    }
+  }
+}
