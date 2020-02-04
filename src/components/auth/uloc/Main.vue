@@ -10,7 +10,8 @@ export default {
   props: {},
   data () {
     return {
-      loginErrorData: null
+      loginErrorData: null,
+      isSubmiting: false
     }
   },
   beforeCreate () {
@@ -23,6 +24,7 @@ export default {
   methods: {
     __doLogin () {
       this.$refs.bar.start()
+      this.isSubmiting = true
       this.doLogin()
         .then((r) => {
           if (this.$route.query.redirect && this.$route.query.redirect !== '/logout') {
@@ -30,8 +32,10 @@ export default {
           } else {
             this.$router.push('/')
           }
+          this.isSubmiting = false
         })
         .catch((err) => {
+          this.isSubmiting = false
           console.log('ERRO LOGIN')
           console.log('Login error', err)
           this.loginErrorData = err.message || 'Ocorreu algum erro no login'
@@ -89,7 +93,7 @@ export default {
           <div class="text-left m-t-xxl">
             <u-checkbox label="Lembrar-me deste computador" v-model="rememberMe"></u-checkbox>
           </div>
-          <u-btn type="submit" color="green" size="md" icon-right="keyboard_arrow_right" label="Entrar"
+          <u-btn :disabled="isSubmiting" type="submit" color="green" size="md" icon-right="keyboard_arrow_right" label="Entrar"
                  class="w-full m-t btn-login"></u-btn>
         </form>
       </div>
