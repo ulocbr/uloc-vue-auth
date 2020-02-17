@@ -27,7 +27,6 @@ export default {
       this.isSubmiting = true
       this.doLogin()
         .then((r) => {
-          this.$refs.bar.stop()
           if (this.$route.query.redirect && this.$route.query.redirect !== '/logout') {
             this.$router.push({ path: this.$route.query.redirect })
           } else {
