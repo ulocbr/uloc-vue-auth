@@ -61,9 +61,11 @@ export default {
     <div class="b-col-md-6 novidades tela">
       <div class="conteudo hidden-xs hidden-sm">
         <div class="contexto">
-          <p class="bem-vindo">Bem-vindo ao Uloc Auth!</p>
-          <p class="mensagem">Mais um dia incrível para seus projetos!</p>
-          <p class="mensagem">:)</p>
+          <slot name="login-message">
+            <p class="bem-vindo">Bem-vindo ao Uloc Auth!</p>
+            <p class="mensagem">Mais um dia incrível para seus projetos!</p>
+            <p class="mensagem">:)</p>
+          </slot>
         </div>
       </div>
     </div>
