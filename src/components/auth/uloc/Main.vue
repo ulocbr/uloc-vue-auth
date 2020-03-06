@@ -1,5 +1,5 @@
 <script>
-import { UBtn, UField, UInput UAjaxBar, UCheckbox } from 'uloc-vue'
+import { UBtn, UField, UInput, UAjaxBar, UCheckbox } from 'uloc-vue'
 import LoginMixin from '../login.mixin.js'
 import LogoUloc from './Logo'
 

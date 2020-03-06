@@ -2,7 +2,7 @@
 import Login from './Forms/Login'
 import ImageBg from './ImageBg'
 
-var moment = require('moment')
+// var moment = require('moment') // TODO: Removed in 0.0.2. Change to date-fcn
 
 export default {
   name: 'Auth',
@@ -10,7 +10,7 @@ export default {
   props: {
   },
   data () {
-    this.now = moment().locale(this.lang)
+    // this.now = moment().locale(this.lang) // TODO: Removed in 0.0.2. Change to date-fcn
     return {
       nowTime: this.now.format('HH:mm'),
       nowDate: this.now.format('ddd, DD [DE] MMM', 'pt_BR'),
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     updateTime () {
-      this.now = moment().locale(this.lang)
+      // this.now = moment().locale(this.lang) // TODO: Removed in 0.0.2. Change to date-fcn
       this.nowTime = this.now.format('HH:mm')
       this.nowDate = this.now.format('ddd, DD [DE] MMM', 'pt_BR')
     },
