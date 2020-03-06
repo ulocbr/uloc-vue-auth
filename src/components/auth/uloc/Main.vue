@@ -1,12 +1,12 @@
 <script>
-import { UBtn, UAjaxBar, UCheckbox } from 'uloc-vue'
+import { UBtn, UField, UInput UAjaxBar, UCheckbox } from 'uloc-vue'
 import LoginMixin from '../login.mixin.js'
 import LogoUloc from './Logo'
 
 export default {
   name: 'Auth',
   mixins: [LoginMixin],
-  components: { LogoUloc, UAjaxBar, UBtn, UCheckbox },
+  components: { LogoUloc, UAjaxBar, UBtn, UCheckbox, UField, UInput },
   props: {},
   data () {
     return {
