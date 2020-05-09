@@ -864,6 +864,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/lru-cache@^4.1.1":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@types/lru-cache/-/lru-cache-4.1.2.tgz#528ba392658055dba78fc3be906ca338a1a2d1c5"
+  integrity sha512-ve2IoUJClE+4S/sG2zoLGEHP6DCvqgyz7UkHZdiICdQaAYRaCXsRWfJlbL8B0KvUyo9lgzD+oR0YSy4YikFyFQ==
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
@@ -1416,6 +1421,16 @@ aws4@^1.8.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.9.0.tgz#24390e6ad61386b0a747265754d2a17219de862c"
   integrity sha512-Uvq6hVe90D0B2WEnUqtdgY1bATGz3mw33nH9Y+dmA+w5DHvUmBgkr5rM/KCHpCsiFNRUfokW/szpPPgMK2hm4A==
+
+axios-extensions@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/axios-extensions/-/axios-extensions-3.1.2.tgz#f4e842bbfb90e597ab17b2bf8baf2bddc85fb736"
+  integrity sha512-gJN3Ni5le+/5Oi7MuRlB9NV9hJW8L0hXUntyAa2n9D85ipZUn89HOygGoI0ycr1R1jjZfkqcZ/AHowrbkK5wnw==
+  dependencies:
+    "@types/lru-cache" "^4.1.1"
+    lru-cache "^4.1.5"
+    tslib "^1.9.0"
+    util "^0.11.1"
 
 axios@^0.18.1:
   version "0.18.1"
@@ -5376,7 +5391,7 @@ lower-case@^1.1.1:
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
   integrity sha1-miyr0bno4K6ZOkv31YdcOcQujqw=
 
-lru-cache@^4.0.1, lru-cache@^4.1.2:
+lru-cache@^4.0.1, lru-cache@^4.1.2, lru-cache@^4.1.5:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
   integrity sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==
@@ -8517,8 +8532,8 @@ uglify-to-browserify@~1.0.0:
   integrity sha1-bgkk1r2mta/jSeOabWMoUKD4grc=
 
 uloc-vue@ulocbr/uloc-vue#master:
-  version "0.0.2"
-  resolved "https://codeload.github.com/ulocbr/uloc-vue/tar.gz/2ca735c0a6f62465d72a81db51822ef157e5d589"
+  version "0.0.3"
+  resolved "https://codeload.github.com/ulocbr/uloc-vue/tar.gz/6a3168d96c740096f5c552dfab38dec65f5975fc"
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -8672,7 +8687,7 @@ util@0.10.3:
   dependencies:
     inherits "2.0.1"
 
-util@^0.11.0:
+util@^0.11.0, util@^0.11.1:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/util/-/util-0.11.1.tgz#3236733720ec64bb27f6e26f421aaa2e1b588d61"
   integrity sha512-HShAsny+zS2TZfaXxD9tYj4HQGlBezXZMZuM/S5PKLLoZkShZiGk9o5CzukI1LVHZvjdvZ2Sj1aW/Ndn2NB/HQ==
