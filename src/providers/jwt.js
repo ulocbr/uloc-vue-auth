@@ -20,12 +20,12 @@ class JWTProvider { // TODO: Create Interface Provider
         return Promise.reject(error)
       }
       if (error.response.data.status === 401) {
-        if (error.response.data.detail === 'Invalid Token') {
+        if (error.response.data.detail === 'Invalid Token' || error.response.data.detail === 'Expired JWT Token') {
           console.log('TOKEN EXPIRADO! Redirecionando...')
           // router.push('/logout')
-          window.location = '/#/logout' // TODO: temporary
           // TODO: Apagar storage local com token e header http
           delete http.defaults.headers.common['Authorization']
+          window.location = '/#/logout' // TODO: temporary
           return false
         }
       }
