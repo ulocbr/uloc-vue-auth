@@ -16,7 +16,7 @@ function createRouterListener (Plugin) {
       _next()
       return
     }
-    if (!isLogged() && !Plugin.firewall.publicRoutes.includes(to)) { // Not logged
+    if (!isLogged() && !Plugin.firewall.publicRoutes.includes(to.path)) { // Not logged
       if (Plugin.loggedIn()) { // Logged by local storage cache
         if (isAuthRoute(to)) {
           _next({
